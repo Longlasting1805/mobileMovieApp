@@ -7,12 +7,11 @@ import { icons } from '@/constants/icons'
 const TabIcon = ({ focused, icon, title }: any) => {
     if (focused) {
 
-
         return (
             <ImageBackground
                 source={images.highlight}
-                className='flex flex-row w-full 
-                                flex-1 min-w-[112px] min-h-14 mt-4 
+                className='flex flex-row w-full
+                                flex-1 min-w-[112px] min-h-16 mt-4 
                                 justify-center items-center rounded-full overflow-hidden'
             >
                 <Image source={icon}
@@ -25,7 +24,7 @@ const TabIcon = ({ focused, icon, title }: any) => {
     }
     return (
         <View className='size-full justify-center item-center mt-4 rounded-full'>
-            <Image source={icon} tintColor="#A8B5DB" className='size-5'/>
+            <Image source={icon} tintColor="#A8B5DB" className='size-5' />
         </View>
     )
 
@@ -33,7 +32,29 @@ const TabIcon = ({ focused, icon, title }: any) => {
 
 const _layout = () => {
     return (
-        <Tabs>
+        <Tabs
+            screenOptions={{
+                tabBarShowLabel: false,
+                tabBarItemStyle: {
+                    width: '100%',
+                    height: '100%',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                },
+                tabBarStyle: {
+                    backgroundColor: '#0f0D23',
+                    borderRadius: 50,
+                    marginHorizontal: 20,
+                    marginBottom: 36,
+                    height: 52,
+                    position: 'absolute',
+                    overflow: 'hidden',
+                    borderWidth: 1,
+                    borderColor: '0d0d23'
+
+                }
+
+            }}>
             <Tabs.Screen
                 name='index'
                 options={{
