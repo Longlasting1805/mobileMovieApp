@@ -1,12 +1,17 @@
-import { Text, View } from 'react-native';
+import { icons } from '@/constants/icons';
+import { images } from '@/constants/images';
+import { Image, ScrollView, Text, View } from 'react-native';
 
 export default function Index() {
   return (
-  <View className="flex-1 justify-center items-center text-blue-200">
-  <Text className=" text-2xl font-bold animate-bounce text-dark-200">
-    Tailwind Works!
-  </Text>
-</View>
+    <View className='flex-1 bg-primary'>
+      <Image source={images.bg} className='absolute w-full z-0'/>
+
+      <ScrollView className="flex-1 px-5">
+        <Image source={icons.logo} className='w-12 h-10 mt-20 mb-5 mx-auto'/>
+      </ScrollView>
+
+    </View>
 
 
   );
