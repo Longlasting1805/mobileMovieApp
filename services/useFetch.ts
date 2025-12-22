@@ -3,12 +3,12 @@
 
 // useFetch(fetchMovies)
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const useFetch = <T>(fetchFunction: () => Promise<T>, autoFetch = true) => {
     const [data, setData] = useState<T | null>(null);
     const [loading, setLoading] = useState(false) 
-    const [error, setError] = useState<Error | null> (null)
+    const [error, setError] = useState<Error | null>(null)
 
     const fetchData = async () => {
         try{
@@ -17,7 +17,10 @@ const useFetch = <T>(fetchFunction: () => Promise<T>, autoFetch = true) => {
 
             const result = await fetchFunction();
 
+            setData(result)
+
         } catch (err) {
+            //@ts-ignore
             setError(err instanceof Error ? err : new Error('An error occured'))
         } finally {
             setLoading(false)
