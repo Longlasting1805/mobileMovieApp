@@ -17,7 +17,6 @@ export default function Index() {
   } = useFetch(() => fetchMovies({
     query: ''
   }))
-
   
 
   return (
