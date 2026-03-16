@@ -48,3 +48,18 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+- ## AI Search Mobile App
+
+- ## Demo Video
+- Watch the app demo here: https://www.youtube.com/shorts/Y6p-hCGR-HQ
+
+- ## Features
+- AI Powered Search
+- Fast Responses
+- Simple Mobile Interfaces
+
+- ## Tech Stack
+- React Native /Swift/ Flutter
+- Node.js backend
+- OpenAI API
